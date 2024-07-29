@@ -307,3 +307,129 @@ hr {
   display: flex;
   justify-content: space-around;
 }
+
+:root {
+  /* Update color scheme for a more modern look */
+  --clr-primary: #3498db;
+  --clr-primary-dark: #2980b9;
+  --clr-primary-light: #5dade2;
+  --clr-grey-1: #2c3e50;
+  --clr-grey-5: #7f8c8d;
+  --clr-grey-10: #ecf0f1;
+  --clr-white: #fff;
+  --clr-red-dark: #c0392b;
+  --clr-red-light: #e74c3c;
+  --transition: all 0.3s ease;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.6;
+}
+
+/* Enhance button styles */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar improvements */
+nav {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-center h3 {
+  font-weight: 700;
+}
+
+.nav-container svg {
+  transition: var(--transition);
+}
+
+.nav-container:hover svg {
+  transform: scale(1.1);
+}
+
+/* Cart item enhancements */
+.cart-item {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.cart-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cart-item img {
+  border-radius: var(--radius);
+}
+
+/* Improve button styles */
+.remove-btn,
+.amount-btn {
+  transition: var(--transition);
+}
+
+.remove-btn:hover,
+.amount-btn:hover {
+  color: var(--clr-primary-dark);
+  transform: scale(1.05);
+}
+
+/* Modal improvements */
+.modal {
+  border-radius: var(--radius);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.clear-btn,
+.confirm-btn {
+  transition: var(--transition);
+}
+
+.clear-btn:hover,
+.confirm-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional enhancements */
+.cart h2 {
+  color: var(--clr-primary-dark);
+  font-weight: 700;
+}
+
+.cart-total h4 {
+  font-weight: 600;
+}
+
+.amount {
+  font-weight: 600;
+}
+
+/* Improve responsiveness */
+@media screen and (min-width: 800px) {
+  .cart {
+    padding: 4rem 0;
+  }
+  
+  .cart-item {
+    grid-template-columns: auto 1fr auto auto;
+    grid-column-gap: 2rem;
+  }
+}
